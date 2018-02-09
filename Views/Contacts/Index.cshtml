@@ -1,0 +1,12 @@
+<h1>Contacts</h1>
+<ul>
+  @foreach(var contact in Model)
+  {
+    <li>@contact.GetFirstName() @contact.GetLastName()</li>
+  }
+</ul>
+<p><a href="/contacts/new">Add another contact</a></p>
+
+<form action="/items/delete" method="post">
+  <button type="submit">Clear All Contacts</button>
+</form>

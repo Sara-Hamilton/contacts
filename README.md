@@ -39,10 +39,10 @@ git clone https://github.com/Sara-Hamilton/contacts.git
   See https://www.learnhowtoprogram.com/c/getting-started-with-c/installing-c for instructions and links.
 
 * _Run the program_
-1. In the command line, cd into the project folder.
-2. In the command line, type dotnet restore. Enter.  It make take a few minutes to complete this process.
-3. In the command line, type dotnet build. Enter. Any errror messages will be displayed in red.  Errors will need to be corrected before the app can be run. After correcting errors and saving changes, type dotnet build again.  When message says Build succeeded in green, proceed to the next step.
-4. In the command line, type dotnet run. Enter.
+  1. In the command line, cd into the project folder.
+  2. In the command line, type dotnet restore. Enter.  It make take a few minutes to complete this process.
+  3. In the command line, type dotnet build. Enter. Any errror messages will be displayed in red.  Errors will need to be corrected before the app can be run. After correcting errors and saving changes, type dotnet build again.  When message says Build succeeded in green, proceed to the next step.
+  4. In the command line, type dotnet run. Enter.
 
 * _View program on web browser at port localhost:5000/contacts_
 

@@ -27,7 +27,7 @@ _This is the Epicodus weekly project for week 1 of the C# course. Its purpose is
 * _Clone this GitHub repository_
 
 ```
-https://github.com/Sara-Hamilton/contacts.git
+git clone https://github.com/Sara-Hamilton/contacts.git
 ```
 
 * _Install the .NET Framework_
@@ -39,16 +39,16 @@ https://github.com/Sara-Hamilton/contacts.git
   See https://www.learnhowtoprogram.com/c/getting-started-with-c/installing-c for instructions and links.
 
 * _Run the program_
-  1. In the command line, cd into the project folder.
-  2. In the command line, type dotnet restore. Enter.  It make take a few minutes to complete this process.
-  3. In the command line, type dotnet build. Enter. Any errror messages will be displayed in red.  Errors will need to be corrected before the app can be run. After correcting errors and saving changes, type dotnet build again.  When message says Build succeeded in green, proceed to the next step.
-  4. In the command line, type dotnet run. Enter.
+1. In the command line, cd into the project folder.
+2. In the command line, type dotnet restore. Enter.  It make take a few minutes to complete this process.
+3. In the command line, type dotnet build. Enter. Any errror messages will be displayed in red.  Errors will need to be corrected before the app can be run. After correcting errors and saving changes, type dotnet build again.  When message says Build succeeded in green, proceed to the next step.
+4. In the command line, type dotnet run. Enter.
 
 * _View program on web browser at port localhost:5000/contacts_
 
-* _Create contacts by clicking the Add Contact link, filling out the form, and clicking the Submit button_
+* _Create contacts by clicking the "Add Contact" link, filling out the form, and clicking the "Submit" button_
 
-* _Delete entire list of contacts by clicking the Clear All Contacts button._
+* _Delete entire list of contacts by clicking the "Clear All Contacts" button._
 
 ## Support and contact details
 

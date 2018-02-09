@@ -17,7 +17,6 @@ namespace Contacts.Controllers
     public ActionResult Create()
     {
       Contact newContact = new Contact (Request.Form["first-name"], Request.Form["last-name"], Request.Form["phone"], Request.Form["street"], Request.Form["city"], Request.Form["state"], Request.Form["zip"]);
-      // newContact.Save();
       List<Contact> allContacts = Contact.GetAll();
       return View("Index", allContacts);
     }

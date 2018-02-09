@@ -1,12 +1,22 @@
-<h1>Contacts</h1>
-<ul>
-  @foreach(var contact in Model)
-  {
-    <li>@contact.GetFirstName() @contact.GetLastName()</li>
-  }
-</ul>
-<p><a href="/contacts/new">Add Contact</a></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contacts</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Contacts</h1>
+    <ul>
+      @foreach(var contact in Model)
+      {
+        <li>@contact.GetFirstName() @contact.GetLastName()</li>
+      }
+    </ul>
+    <p><a href="/contacts/new">Add Contact</a></p>
 
-<form action="/contacts/delete" method="post">
-  <button type="submit">Clear All Contacts</button>
-</form>
+    <form action="/contacts/delete" method="post">
+      <button type="submit">Clear All Contacts</button>
+    </form>
+  </body>
+</html>

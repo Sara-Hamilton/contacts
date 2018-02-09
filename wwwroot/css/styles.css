@@ -1,11 +1,11 @@
 div#footer {
-    position:fixed;
-    bottom:0px;
-    left:0px;
-    width:100%;
-    color:#437589;
-    background:#10252E;
-    padding:8px;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#437589;
+  background:#10252E;
+  padding:8px;
 }
 
 .jumbotron {
@@ -14,11 +14,11 @@ div#footer {
   background-color: #457487;
   color: #223B44;
   color: #E7F0F3;
-  /*height: 20em;*/
 }
 
 body {
   background-color: #E7F0F3;
+  color: #223B44;
 }
 
 .name {
@@ -28,4 +28,8 @@ body {
 
 .address {
   color: #223B44;
+}
+
+li {
+  font-size: 36px;
 }

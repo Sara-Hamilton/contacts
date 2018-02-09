@@ -17,9 +17,15 @@ namespace Contacts.Controllers
     [HttpPost("/contacts")]
     public ActionResult Create()
     {
-      Contact newContact = new Contact (Request.Form["first-name"], Request.Form["last-name"], Request.Form["phone"], Request.Form["street"], Request.Form["city"], Request.Form["state"], Request.Form["zip"]);
+      Address newAddress = new Address (Request.Form["street"], Request.Form["city"], Request.Form["state"], Request.Form["zip"]);
+      Contact newContact = new Contact (Request.Form["first-name"], Request.Form["last-name"], Request.Form["phone"], newAddress);
+      Dictionary<string, object> ContactInfo = new Dictionary<string, object>();
+      ContactInfo.Add("address", newAddress);
+      ContactInfo.Add("contact", newContact);
       List<Contact> allContacts = Contact.GetAll();
-      return View("Index", allContacts);
+
+      // return View("Index", allContacts);
+      return View("Index", ContactInfo);
     }
 
     [HttpGet("/contacts/new")]

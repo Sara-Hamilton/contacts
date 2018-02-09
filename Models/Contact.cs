@@ -8,22 +8,23 @@ namespace Contacts.Models
     private string _firstName;
     private string _lastName;
     private string _phone;
-    private string _street;
-    private string _city;
-    private string _state;
-    private string _zip;
+    private Address _address;
+    // private string _street;
+    // private string _city;
+    // private string _state;
+    // private string _zip;
     private int _id;
     private static List<Contact> _instances = new List<Contact> {};
 
-    public Contact(string firstName, string lastName, string phone, string street, string city, string state, string zip)
+    public Contact(string firstName, string lastName, string phone, Address address)
     {
       _firstName = firstName;
       _lastName = lastName;
       _phone = phone;
-      _street = street;
-      _city = city;
-      _state = state;
-      _zip = zip;
+      // _street = street;
+      // _city = city;
+      // _state = state;
+      // _zip = zip;
       _instances.Add(this);
       _id = _instances.Count;
     }
@@ -58,45 +59,55 @@ namespace Contacts.Models
       _phone = phone;
     }
 
-    public string GetStreet()
+    public Address GetAddress()
     {
-      return _street;
+      return _address;
     }
 
-    public void SetStreet(string street)
+    public void SetAddress(Address address)
     {
-      _street = street;
+      _address = address;
     }
 
-    public string GetCity()
-    {
-      return _city;
-    }
-
-    public void SetCity(string city)
-    {
-      _city = city;
-    }
-
-    public string GetState()
-    {
-      return _state;
-    }
-
-    public void SetState(string state)
-    {
-      _state = state;
-    }
-
-    public string GetZip()
-    {
-      return _zip;
-    }
-
-    public void SetZip(string zip)
-    {
-      _zip = zip;
-    }
+    // public string GetStreet()
+    // {
+    //   return _street;
+    // }
+    //
+    // public void SetStreet(string street)
+    // {
+    //   _street = street;
+    // }
+    //
+    // public string GetCity()
+    // {
+    //   return _city;
+    // }
+    //
+    // public void SetCity(string city)
+    // {
+    //   _city = city;
+    // }
+    //
+    // public string GetState()
+    // {
+    //   return _state;
+    // }
+    //
+    // public void SetState(string state)
+    // {
+    //   _state = state;
+    // }
+    //
+    // public string GetZip()
+    // {
+    //   return _zip;
+    // }
+    //
+    // public void SetZip(string zip)
+    // {
+    //   _zip = zip;
+    // }
 
     public int GetId()
     {
@@ -123,15 +134,17 @@ namespace Contacts.Models
       return _instances[searchId-1];
     }
 
+    // if contact is removed from the list, the contact ids no longer match up with their index number in the list, contact properties are altered with DeleteOne method instead
     public void DeleteOne()
     {
       _firstName = "deleted";
       _lastName = "";
       _phone = "";
-      _street = "";
-      _city = "";
-      _state = "";
-      _zip = "";
+      _address = null;
+      // _street = "";
+      // _city = "";
+      // _state = "";
+      // _zip = "";
     }
   }
 }

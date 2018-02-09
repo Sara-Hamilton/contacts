@@ -11,7 +11,7 @@
       <ul>
         @foreach(var contact in Model)
         {
-          if (@contact.GetFirstName() != "deleted")
+          if (@Model["contact"].GetFirstName() != "deleted")
           {
             <li><a href="/contacts/@contact.GetId()">@contact.GetFirstName() @contact.GetLastName()</a></li>
           }

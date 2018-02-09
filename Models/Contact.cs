@@ -12,6 +12,7 @@ namespace Contacts.Models
     private string _city;
     private string _state;
     private string _zip;
+    private int _id;
     private static List<Contact> _instances = new List<Contact> {};
 
     public Contact(string firstName, string lastName, string phone, string street, string city, string state, string zip)
@@ -23,6 +24,8 @@ namespace Contacts.Models
       _city = city;
       _state = state;
       _zip = zip;
+      _instances.Add(this);
+      _id = _instances.Count;
     }
 
     public string GetFirstName()
@@ -95,6 +98,11 @@ namespace Contacts.Models
       _zip = zip;
     }
 
+    public int GetId()
+    {
+      return _id;
+    }
+
     public static List<Contact> GetAll()
     {
       return _instances;
@@ -108,6 +116,11 @@ namespace Contacts.Models
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+
+    public static Contact Find(int searchId)
+    {
+      return _instances[searchId-1];
     }
   }
 }

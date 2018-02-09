@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Details</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>@Model.GetFirstName() @Model.GetLastName()</h1>
+      <p>Phone: @Model.GetPhone()</p>
+      <p>Street: @Model.GetStreet()</p>
+      <p>City: @Model.GetCity()</p>
+      <p>State: @Model.GetState()</p>
+      <p>Zip: @Model.GetZip()</p>
+
+      <p><a href="/contacts/new">Add Contact</a></p>
+      <p><a href="/contacts">View all Contacts</a></p>
+
+    </div>
+  </body>
+</html>

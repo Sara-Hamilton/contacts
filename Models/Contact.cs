@@ -118,6 +118,16 @@ namespace Contacts.Models
       _instances.Clear();
     }
 
+    // public void RemoveOne(Contact contact)
+    // {
+    //   _instances.Remove(contact);
+    // }
+
+    // public void List<Contact> RemoveOne(Contact contact)
+    // {
+    //   _instances.Remove(contact);
+    // }
+
     public static Contact Find(int searchId)
     {
       return _instances[searchId-1];

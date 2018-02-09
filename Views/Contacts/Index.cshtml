@@ -11,12 +11,15 @@
       <ul>
         @foreach(var contact in Model)
         {
-          <li><a href="/contacts/@contact.GetId()">@contact.GetFirstName() @contact.GetLastName()</a></li>
+          if (@contact.GetFirstName() != "deleted")
+          {
+            <li><a href="/contacts/@contact.GetId()">@contact.GetFirstName() @contact.GetLastName()</a></li>
+          }
         }
       </ul>
       <p><a href="/contacts/new">Add Contact</a></p>
 
-      <form action="/contacts/delete" method="post">
+      <form action="/contacts/delete/one" method="post">
         <button type="submit" class="btn btn-primary">Clear All Contacts</button>
       </form>
     </div>

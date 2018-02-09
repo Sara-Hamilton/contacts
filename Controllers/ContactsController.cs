@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System;
 using Contacts.Models;
 
 namespace Contacts.Controllers
@@ -34,11 +35,23 @@ namespace Contacts.Controllers
       return View();
     }
 
+    [HttpPost("/contacts/delete/one")]
+    public ActionResult DeleteOne()
+    {
+      Contact foundContact =  Contact.Find(Int32.Parse(Request.Form["contact-id"]));
+      List<Contact> allContacts = Contact.GetAll();
+      // if contact is removed from the list, the contact ids no longer match up with their index number in the list, contact properties are altered with DeleteOne method instead
+      // allContacts.Remove(foundContact);
+      foundContact.DeleteOne();
+      return View("Index", allContacts);
+    }
+
     [HttpGet("/contacts/{id}")]
     public ActionResult Details(int id)
     {
       Contact contact = Contact.Find(id);
       return View(contact);
     }
+
   }
 }

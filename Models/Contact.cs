@@ -122,5 +122,16 @@ namespace Contacts.Models
     {
       return _instances[searchId-1];
     }
+
+    public void DeleteOne()
+    {
+      _firstName = "deleted";
+      _lastName = "";
+      _phone = "";
+      _street = "";
+      _city = "";
+      _state = "";
+      _zip = "";
+    }
   }
 }

@@ -40,7 +40,9 @@ namespace Contacts.Controllers
     {
       Contact foundContact =  Contact.Find(Int32.Parse(Request.Form["contact-id"]));
       List<Contact> allContacts = Contact.GetAll();
-      allContacts.Remove(foundContact);
+      // if contact is removed from the list, the contact ids no longer match up with their index number in the list, contact properties are altered with DeleteOne method instead
+      // allContacts.Remove(foundContact);
+      foundContact.DeleteOne();
       return View("Index", allContacts);
     }
 

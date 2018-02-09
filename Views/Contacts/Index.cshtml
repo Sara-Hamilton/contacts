@@ -11,7 +11,10 @@
       <ul>
         @foreach(var contact in Model)
         {
-          <li><a href="/contacts/@contact.GetId()">@contact.GetFirstName() @contact.GetLastName()</a></li>
+          if (@contact.GetFirstName() != "deleted")
+          {
+            <li><a href="/contacts/@contact.GetId()">@contact.GetFirstName() @contact.GetLastName()</a></li>
+          }
         }
       </ul>
       <p><a href="/contacts/new">Add Contact</a></p>

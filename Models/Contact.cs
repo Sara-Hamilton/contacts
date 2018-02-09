@@ -11,10 +11,10 @@ namespace Contacts.Models
     private string _street;
     private string _city;
     private string _state;
-    private int _zip;
+    private string _zip;
     private static List<Contact> _instances = new List<Contact> {};
 
-    public Contact(string firstName, string lastName, int phone, string street, string city, string state, int zip)
+    public Contact(string firstName, string lastName, string phone, string street, string city, string state, string zip)
     {
       _firstName = firstName;
       _lastName = lastName;
@@ -30,7 +30,7 @@ namespace Contacts.Models
       return _firstName;
     }
 
-    public string SetFirstName(string firstName)
+    public void SetFirstName(string firstName)
     {
       _firstName = firstName;
     }
@@ -40,7 +40,7 @@ namespace Contacts.Models
       return _lastName;
     }
 
-    public string SetLastName(string lastName)
+    public void SetLastName(string lastName)
     {
       _lastName = lastName;
     }
@@ -50,7 +50,7 @@ namespace Contacts.Models
       return _phone;
     }
 
-    public string SetPhone(string phone)
+    public void SetPhone(string phone)
     {
       _phone = phone;
     }
@@ -60,7 +60,7 @@ namespace Contacts.Models
       return _street;
     }
 
-    public string SetStreet(string street)
+    public void SetStreet(string street)
     {
       _street = street;
     }
@@ -70,7 +70,7 @@ namespace Contacts.Models
       return _city;
     }
 
-    public string SetCity(string city)
+    public void SetCity(string city)
     {
       _city = city;
     }
@@ -80,17 +80,17 @@ namespace Contacts.Models
       return _state;
     }
 
-    public string SetState(string state)
+    public void SetState(string state)
     {
       _state = state;
     }
 
-    public int GetZip()
+    public string GetZip()
     {
       return _zip;
     }
 
-    public int SetZip(int zip)
+    public void SetZip(string zip)
     {
       _zip = zip;
     }
@@ -100,7 +100,7 @@ namespace Contacts.Models
       return _instances;
     }
 
-    public void Save();
+    public void Save()
     {
       _instances.Add(this);
     }

@@ -3,7 +3,29 @@ div#footer {
     bottom:0px;
     left:0px;
     width:100%;
-    color:#CCC;
-    background:#333;
+    color:#437589;
+    background:#10252E;
     padding:8px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #76A8BC;
+  background-color: #457487;
+  color: #223B44;
+  color: #E7F0F3;
+  /*height: 20em;*/
+}
+
+body {
+  background-color: #E7F0F3;
+}
+
+.name {
+  color: #3e7a92;
+  color: #437589;
+}
+
+.address {
+  color: #223B44;
 }

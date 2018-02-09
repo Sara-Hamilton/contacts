@@ -2,16 +2,16 @@
   Layout = "_Layout";
 }
 
-<h1>@Model.GetFirstName() @Model.GetLastName()</h1>
-<p>Phone: @Model.GetPhone()</p>
-<p>Street: @Model.GetStreet()</p>
-<p>City: @Model.GetCity()</p>
-<p>State: @Model.GetState()</p>
-<p>Zip: @Model.GetZip()</p>
+<h1 class="name">@Model.GetFirstName() @Model.GetLastName()</h1>
+<p class="address">Phone: @Model.GetPhone()</p>
+<p class="address">Street: @Model.GetStreet()</p>
+<p class="address">City: @Model.GetCity()</p>
+<p class="address">State: @Model.GetState()</p>
+<p class="address">Zip: @Model.GetZip()</p>
 
 <form action="/contacts/delete_one" method="post">
   <input type="hidden" id="contact-id" name="contact-id" value="@Model.GetId()">
-  <button type="submit" class="btn btn-primary">Clear this Contact</button>
+  <button type="submit" class="btn btn-default">Clear this Contact</button>
 </form>
 <p><a href="/contacts/new">Add Contact</a></p>
 <p><a href="/contacts">View all Contacts</a></p>

@@ -14,8 +14,16 @@ namespace Contacts.Models
     private int _zip;
     private static List<Contact> _instances = new List<Contact> {};
 
-    // make constructor here if needed
-    // public Contact()
+    public Contact(string firstName, string lastName, int phone, string street, string city, string state, int zip)
+    {
+      _firstName = firstName;
+      _lastName = lastName;
+      _phone = phone;
+      _street = street;
+      _city = city;
+      _state = state;
+      _zip = zip;
+    }
 
     public string GetFirstName()
     {

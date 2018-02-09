@@ -6,30 +6,46 @@
     <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Contacts</h1>
-    <form action="/contacts" method="post">
-      <label for="first-name">First name:</label>
-      <input id="first-name" name="first-name" type="text" required="true">
+    <div class="container">
+      <h1>Contacts</h1>
+      <form action="/contacts" method="post">
+        <div class="form-group">
+          <label for="first-name">First name:</label>
+          <input class="form-control" id="first-name" name="first-name" type="text" required="true">
+        </div>
 
-      <label for="last-name">Last name:</label>
-      <input id="last-name" name="last-name" type="text">
+        <div class="form-group">
+          <label for="last-name">Last name:</label>
+          <input class="form-control" id="last-name" name="last-name" type="text">
+        </div>
 
-      <label for="phone">Phone:</label>
-      <input id="phone" name="phone" type="string">
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input class="form-control" id="phone" name="phone" type="string">
+        </div>
 
-      <label for="street">Street:</label>
-      <input id="street" name="street" type="text">
+        <div class="form-group">
+          <label for="street">Street:</label>
+          <input class="form-control" id="street" name="street" type="text">
+        </div>
 
-      <label for="city">City:</label>
-      <input id="city" name="city" type="text">
+        <div class="form-group">
+          <label for="city">City:</label>
+          <input class="form-control" id="city" name="city" type="text">
+        </div>
 
-      <label for="state">State:</label>
-      <input id="state" name="state" type="text">
+        <div class="form-group">
+          <label for="state">State:</label>
+          <input class="form-control" id="state" name="state" type="text">
+        </div>
 
-      <label for="zip">Zipcode:</label>
-      <input id="zip" name="zip" type="number" min="10000">
+        <div class="form-group">
+          <label for="zip">Zipcode:</label>
+          <input class="form-control" id="zip" name="zip" type="number" min="10000">
+        </div>
 
-      <button type="submit">Submit</button>
-    </form>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
   </body>
 </html>

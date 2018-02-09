@@ -7,7 +7,7 @@ namespace Contacts.Models
   {
     private string _firstName;
     private string _lastName;
-    private int _phone;
+    private string _phone;
     private string _street;
     private string _city;
     private string _state;
@@ -45,12 +45,12 @@ namespace Contacts.Models
       _lastName = lastName;
     }
 
-    public int GetPhone()
+    public string GetPhone()
     {
       return _phone;
     }
 
-    public int SetPhone(int phone)
+    public string SetPhone(string phone)
     {
       _phone = phone;
     }

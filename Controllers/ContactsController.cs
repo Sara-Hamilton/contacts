@@ -35,7 +35,7 @@ namespace Contacts.Controllers
       return View();
     }
 
-    [HttpPost("/contacts/delete/one")]
+    [HttpPost("/contacts/delete_one")]
     public ActionResult DeleteOne()
     {
       Contact foundContact =  Contact.Find(Int32.Parse(Request.Form["contact-id"]));

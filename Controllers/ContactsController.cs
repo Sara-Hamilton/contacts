@@ -17,7 +17,7 @@ namespace Contacts.Controllers
     public ActionResult Create()
     {
       Contact newContact = new Contact (Request.Form["first-name"], Request.Form["last-name"], Request.Form["phone"], Request.Form["street"], Request.Form["city"], Request.Form["state"], Request.Form["zip"]);
-      newContact.Save();
+      // newContact.Save();
       List<Contact> allContacts = Contact.GetAll();
       return View("Index", allContacts);
     }
@@ -33,6 +33,13 @@ namespace Contacts.Controllers
     {
       Contact.ClearAll();
       return View();
+    }
+
+    [HttpGet("/contacts/{id}")]
+    public ActionResult Details(int id)
+    {
+      Contact contact = Contact.Find(id);
+      return View(contact);
     }
   }
 }

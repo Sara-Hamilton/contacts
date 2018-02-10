@@ -9,18 +9,27 @@
 _This is the Epicodus weekly project for week 1 of the C# course. Its purpose is to display understanding .Net MVC architecture in C#._
 
 #### _Contacts_
-* Allows the user to create a new contact by clicking on a link that says "Add Contact"
+* Allows the user to create a new contact by clicking on a navbar link that says "Add Contact"
 * Displays an input form that takes in the user's contact info - First name, Last name, Phone number, Street, City, State, and Zipcode - First name is required.  All other input is optional.
 * Creates a new contact with the inputted values
 * Displays a list of the first and last names of all contacts
 * Allows the user to continue to create as many new contacts as they desire and always re-routes to the list of all contact names
-* Allows the user to erase all contacts by clicking on a button labeled "Clear All Contacts"
+* Allows the user to click on a contact name to see all of the properties for that contact
+* Allows the user to delete an individual contact by clicking on a button labeled "Clear this Contact" on the page that displays the contact details
+* Allows the user to erase all contacts by clicking on a button labeled "Clear All Contacts" on the page that displays all contacts
+* Allows the user to navigate between pages with navbar links
 
 ### Specifications
+
+#### Minimum Requirements:
 * The app contains a Contact class with properties for the person's name, phone number, and address.
 * The Homepage of the app at the root path (localhost:5000/contacts) lists all contacts.
 * The Homepage contains a link to a page presenting the user with a form they can fill out to create a new Contact. After the form is submitted, the new Contact object is be saved into a static List and the user is be routed back to the homepage.
-* The homepage also contains a form with only a clear button at the bottom of the list of all contacts. When this is pressed, all Contacts are deleted, and the user is routed back to the homepage.
+* The homepage also contains a form with a clear button at the bottom of the list of all contacts. When this is pressed, all Contacts are deleted, and the user is routed back to the homepage.  
+
+#### Additional Specifications:
+* Contact names on the homepage are links that redirect the user to a page that displays all of the details about the contact.
+* On the contact details page, users can delete the individual contact by clicking a button.  They also have the option to add another contact to the list or return to the homepage without making any changes.  
 
 ## Setup/Installation Requirements
 

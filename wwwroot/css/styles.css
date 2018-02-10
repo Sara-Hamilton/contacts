@@ -22,14 +22,14 @@ body {
 }
 
 .name {
-  color: #3e7a92;
   color: #437589;
+  font-size: 36px;
 }
 
 .address {
   color: #223B44;
 }
 
-li {
+/*.contacts {
   font-size: 36px;
-}
+}*/

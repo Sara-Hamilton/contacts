@@ -6,7 +6,7 @@
 
 ## Description
 
-_This is the Epicodus weekly project for week 1 of the C# course. Its purpose is to display understanding .Net MVC architecture in C#._
+_This is the Epicodus weekly project for week 1 of the C# course. Its purpose is to display understanding of .Net MVC architecture in C#._
 
 #### _Contacts_
 * Allows the user to create a new contact by clicking on a navbar link that says "Add Contact"
